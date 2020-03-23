@@ -1,3 +1,4 @@
+@import './variables.css';
 @import './modules/animate.css';
 @tailwind base;
 @tailwind components;

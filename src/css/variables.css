@@ -1,0 +1,14 @@
+html:root{
+  --pri-color-sage:#87bcbf;
+  --pri-color-rust:#D97D54;
+  --pri-color-drab:#324755;
+  --pri-color-danger: #D95454;
+
+  --typo-color-onyx: #1B1C20;
+  --typo-color-slate: #6e8ca0;
+  --typo-color-snow: #ffffff;
+
+  --sec-color-ice: #F0F3F4;
+  --sec-color-fossil: #C8D1D3;
+  --sec-color-sand: #B9B0A2;
+}
