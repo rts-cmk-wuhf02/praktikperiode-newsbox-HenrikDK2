@@ -65,7 +65,7 @@ function CSS(done) {
         .pipe(pxtorem({ map: true }))
         .pipe(
             purgecss({
-                content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.js', './src/**/*.ejs'],
+                content: ['./src/**/*.js', './src/**/*.ejs'],
                 extractors: [
                     {
                         extractor: TailwindExtractor,
