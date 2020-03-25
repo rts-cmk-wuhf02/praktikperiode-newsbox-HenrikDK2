@@ -51,8 +51,7 @@ function Html(done) {
             path.extname = ".html"
         }))
         .pipe(gulp.dest("./dist"))
-        .pipe(connect.reload());
-    done()
+    CSS(done)
 }
 
 function CSS(done) {
@@ -63,19 +62,7 @@ function CSS(done) {
             require('autoprefixer')
         ]))
         .pipe(pxtorem({ map: true }))
-        .pipe(
-            purgecss({
-                content: ['./src/**/*.js', './src/**/*.ejs'],
-                extractors: [
-                    {
-                        extractor: TailwindExtractor,
-                        extensions: ['html']
-                    }
-                ],
-                whitelist: ['is-active', 'hidden'],
-                keyframes: true
-            })
-        )
+
         .pipe(cleanCSS({ compatibility: "ie7" }))
         .pipe(gulp.dest('dist/assets/css/'))
         .pipe(connect.reload());
@@ -86,7 +73,6 @@ function watchDev() {
     gulp.watch("src/images/**/*.*", { ignoreInitial: false }, Images);
     gulp.watch("src/html/**/*.ejs", { ignoreInitial: false }, Html);
     gulp.watch("src/css/**/*.css", { ignoreInitial: false }, CSS);
-    gulp.watch("src/html/**/*.ejs", CSS);
     gulp.watch("./tailwind.config.js", CSS);
     gulp.watch("src/css/fonts/*.*", { ignoreInitial: false }, Fonts);
     gulp.watch("src/javascript/**/*.js", { ignoreInitial: false }, JS);

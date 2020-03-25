@@ -3,6 +3,21 @@
 <%- include('../partials/after-head.ejs') %>
 <%- include('../partials/header.ejs') %>
 <main>
+  <ul>
+    <li class="w-full border-ice h-item border-b flex cursor-pointer items-center px-4 font-primary">
+      <div class="w-10 h-10 relative rounded-circle border-2 border-snow shadow-big">
+        <img src="/assets/images/icn_surfing.svg" alt="Icon" class="absolute w-4/6 translate-50 left-1/2 top-1/2">
+      </div>
+
+      <h3 class="uppercase text-drab ml-3 font-bold">Sport</h3>
+      <ion-icon name="chevron-forward-outline" class="ml-auto text-2xl"></ion-icon>
+    </li>
+
+    <ul>
+      <%- include('../components/article.ejs') %>
+      <%- include('../components/article.ejs') %>
+    </ul>
+  </ul>
 </main>
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/after-body.ejs') %>

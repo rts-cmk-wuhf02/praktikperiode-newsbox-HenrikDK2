@@ -1,5 +1,50 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
-@import './modules/animate.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap");
+@import "./modules/animate.css";
+
+[data-theme="light"] {
+  --sage: #87bcbf;
+  --rust: #d97d54;
+  --drab: #324755;
+  --danger: #d95454;
+  --onyx: #1b1c20;
+  --slate: #6e8ca0;
+  --snow: #fff;
+  --ice: #f0f3f4;
+  --fossil: #c8d1d3;
+  --sand: #b9b0a2;
+}
+
+[data-theme="dark"] {
+  --sage: #87bcbf;
+  --rust: #d97d54;
+  --drab: #324755;
+  --danger: #d95454;
+  --onyx: #1b1c20;
+  --slate: #6e8ca0;
+  --snow: #fff;
+  --ice: #f0f3f4;
+  --fossil: #c8d1d3;
+  --sand: #b9b0a2;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.textOverflow{
+  text-overflow: ellipsis;
+}
+
+.translateX100{
+  transform: translateX(100%);
+
+}
+
+.translateY-50 {
+  transform: translateY(-50%);
+}
+
+.translate-50 {
+  transform: translate(-50%, -50%);
+}
