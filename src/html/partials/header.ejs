@@ -2,24 +2,24 @@
   <nav>
     <ul class="flex justify-between items-center p-6 m-0 border-b border-Fossil">
       <li>
-        <a href="">
-          <ion-icon name="file-tray-outline" class="text-2xl"></ion-icon>
+        <a href="<%=nav[0].link %>">
+          <ion-icon name="<%=nav[0].icon %>" class="text-2xl"></ion-icon>
         </a>
       </li>
 
       <li>
-        <h2 class="text-drab font-primary text-lg font-bold">Newsboks</h2>
+        <h2 class="text-drab font-primary text-lg font-bold"><%= nav[1] %></h2>
       </li>
 
       <li>
-        <a href="">
-          <ion-icon name="settings-sharp" class="text-2xl"></ion-icon>
+        <a href="<%=nav[2].link %>">
+          <ion-icon name="<%=nav[2].icon %>" class="text-2xl"></ion-icon>
         </a>
       </li>
     </ul>
   </nav>
 
-  <div class="p-4 border-b border-Fossil">
+  <div id="search" class="p-4 border-b border-Fossil">
     <div class="relative h-10 w-full">
       <input type="text" placeholder="Search News" class="w-full h-full bg-ice placeholder: pl-8 text-slate">
       <ion-icon name="search-outline" class="absolute top-1/2 translateY-50 right-1/50 text-lg opacity-25"></ion-icon>
