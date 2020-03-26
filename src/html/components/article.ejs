@@ -1,10 +1,18 @@
-<li class="article left-0 h-article border-b border-ice flex items-center pl-5 font-primary overflow-visible relative">
-  <img src="https://picsum.photos/200/300" alt="Image" class="w-16 h-16 object-cover object-top block rounded-circle pointer-events-none select-none">
-  <div class="ml-5">
-    <h3 class="text-drab font-bold select-none">Headline</h3>
-    <p class=" textOverflow text-sm text-slate h-10 leading-5 whitespace-pre-wrap overflow-hidden w-65vw select-none">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ratione qui laudantium illo nemo, obcaecati ducimus eius aperiam quidem magnam quod. Earum obcaecati ipsam consectetur quibusdam exercitationem soluta, possimus illo!</p>
-  </div>
-  <div class=" bg-sage h-full w-32 absolute right-0 translateX100 flex items-center justify-center">
-    <ion-icon name="file-tray-outline"></ion-icon>
-  </div>
-</li>
+<template id="article-template">
+  <li
+    class="article left-0 h-article border-b border-ice flex items-center pl-5 font-primary overflow-visible relative">
+    <img src="https://picsum.photos/200/300" alt="Image"
+      class="w-16 h-16 object-cover object-top block rounded-circle pointer-events-none select-none">
+    <div class="ml-5">
+      <h3 class="textOverflow whitespace-no-wrap overflow-hidden w-65vw text-drab font-bold select-none">Headline</h3>
+      <p class=" textOverflow text-sm text-slate h-10 leading-5 overflow-hidden w-65vw select-none">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ratione qui laudantium illo nemo,
+        obcaecati ducimus eius aperiam quidem magnam quod. Earum obcaecati ipsam consectetur quibusdam exercitationem
+        soluta, possimus illo!</p>
+    </div>
+    <div
+      class="article-btn cursor-pointer bg-sage h-full w-32 absolute right-0 translateX100 flex items-center justify-center">
+      <ion-icon name="file-tray-outline"></ion-icon>
+    </div>
+  </li>
+</template>
