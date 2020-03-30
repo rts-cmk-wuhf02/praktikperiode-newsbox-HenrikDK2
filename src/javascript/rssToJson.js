@@ -1,5 +1,5 @@
-async function rssToJson(rssLink){
-  const res = await fetch(rssLink).then(res => res.text());
+async function rssToJson(category){
+  const res = await fetch(`https://rss.nytimes.com/services/xml/rss/nyt/${category}.xml`).then(res => res.text());
   const xml = new DOMParser().parseFromString(res, "application/xml");
   return xml2json(xml);
 
