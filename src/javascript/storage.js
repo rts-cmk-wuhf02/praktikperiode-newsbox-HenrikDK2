@@ -24,7 +24,6 @@ function storageFunction() {
         storage.splice(index, 1);
         localStorage.setItem('articles', JSON.stringify(storage));
         if (document.title === "Archive") {
-          console.log(item.parentElement.childElementCount)
           if (item.parentElement.childElementCount < 2) {
             item.parentElement.parentElement.remove();
           }
@@ -36,7 +35,6 @@ function storageFunction() {
       } else {
         storage.push(data)
         localStorage.setItem('articles', JSON.stringify(storage));
-        console.log(item.parentElement)
 
 
         if (document.title === "Newsbox") {
