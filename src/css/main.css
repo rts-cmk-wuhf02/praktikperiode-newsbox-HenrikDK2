@@ -13,6 +13,10 @@
   --ice: #f0f3f4;
   --fossil: #c8d1d3;
   --sand: #b9b0a2;
+  --bg: #fff;
+  --icon: #000;
+  --head-alt: #707070;
+  --btn-disabled: #e0e5e5;
 }
 
 [data-theme="dark"] {
@@ -26,19 +30,30 @@
   --ice: #f0f3f4;
   --fossil: #c8d1d3;
   --sand: #b9b0a2;
+  --bg: #161616;
+  --icon: #fff;
+  --head-alt: #707070;
+  --btn-disabled: #e0e5e5;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.textOverflow{
+.min-screen-nav{
+  min-height:calc(100vh - 78.5px);
+}
+
+.textOverflow {
   text-overflow: ellipsis;
 }
 
-.translateX100{
+.translateX100 {
   transform: translateX(100%);
+}
 
+.translateX50 {
+  transform: translateX(50%);
 }
 
 .translateY-50 {

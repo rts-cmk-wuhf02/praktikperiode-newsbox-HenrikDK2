@@ -1,5 +1,4 @@
 const categoryList = document.getElementById('category-list');
-let categories = ['Sports', 'Health', 'World', 'Technology'];
 
 document.addEventListener('DOMContentLoaded', async () => {
   try {

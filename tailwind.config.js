@@ -12,11 +12,16 @@ module.exports = {
         ice:'var(--ice)',
         fossil:'var(--fossil)',
         sand:'var(--sand)',
+        background:'var(--bg)',
+        icon:'var(--icon)',
+        headAlt:'var(--head-alt)',
+        disable:'var(--btn-disabled)'
       },
 
       height:{
         "item":"3.625rem",
-        "article":"6.25rem"
+        "article":"6.25rem",
+        "cItem":"4.4375rem"
       },
 
       fontFamily:{
@@ -29,7 +34,8 @@ module.exports = {
       },
 
       boxShadow:{
-        "big":"0px 0px 10px 5px rgba(0,0,0,0.03)"
+        "big":"0px 0px 10px 5px rgba(0,0,0,0.03)",
+        "circle":"0px 5px 10px 0px rgba(0,0,0,0.28)"
       },
 
       width:{
@@ -37,6 +43,9 @@ module.exports = {
       },
 
       inset:{
+        "10px":"10px",
+        "5px":"5px",
+        "3px":"3px",
         "1/50":"2%",
         "1/2":"50%"
       }
