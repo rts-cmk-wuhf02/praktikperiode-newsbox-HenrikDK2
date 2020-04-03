@@ -8,14 +8,14 @@ defaultCategories.forEach(category => {
   clone.querySelector('h3').textContent = category;
   if (categories.includes(category)) hide = true;
   if (hide === true) {
-    clone.querySelector('.btn').classList.add('bg-sage');
+    clone.querySelector('.btn').classList.add('bg-enable');
     clone.querySelector('.btn').classList.remove('bg-disable');
     clone.querySelector('.btn').querySelector('div').style.left = "38px";
   }
   clone.querySelector('.btn').addEventListener('touchstart', e => {
     if (hide === true) {
       e.currentTarget.classList.add('bg-disable');
-      e.currentTarget.classList.remove('bg-sage');
+      e.currentTarget.classList.remove('bg-enable');
 
       e.currentTarget.querySelector('div').style.left = "2px";
       const index = categories.findIndex(x => x.toLowerCase() === category.toLowerCase());
@@ -25,7 +25,7 @@ defaultCategories.forEach(category => {
       }
       hide = false;
     } else {
-      e.currentTarget.classList.add('bg-sage');
+      e.currentTarget.classList.add('bg-enable');
       e.currentTarget.classList.remove('bg-disable');
       e.currentTarget.querySelector('div').style.left = "38px"
       categories.push(category);

@@ -14,8 +14,16 @@ module.exports = {
         sand:'var(--sand)',
         background:'var(--bg)',
         icon:'var(--icon)',
+        border:'var(--border)',
+        altBorder:'var(--altBorder)',
+        iceBorder:'var(--iceBorder)',
         headAlt:'var(--head-alt)',
-        disable:'var(--btn-disabled)'
+        disable:'var(--btn-disabled)',
+        bgSearch:'var(--bgSearch)',
+        bgCategory:'var(--bgCategory)',
+        bgSettings:'var(--bgSettings)',
+        bgSettings:'var(--bgSettings)',
+        enable:'var(--btn-enabled)'
       },
 
       height:{
