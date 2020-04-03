@@ -87,3 +87,8 @@ gulp.task("dev", function (done) {
 
     done();
 });
+
+gulp.task("final", function (done) {
+    watchDev();
+    done();
+});
