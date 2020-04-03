@@ -1,0 +1,19 @@
+<%- include('../partials/head.ejs') %>
+<script src="/assets/javascript/storage.js"></script>
+<script src="/assets/javascript/settings.js" defer></script>
+<title>Settings</title>
+<%- include('../partials/after-head.ejs') %>
+<% nav = [{icon: 'chevron-back-outline', link: '/'}, 'Settings', {icon: 'none', link: ''}] %>
+<%- include('../partials/header.ejs') %>
+<main class=" bg-bgSettings min-screen-nav font-primary">
+  <section class=" p-6">
+    <h2 class=" text-sage text-center text-3xl font-bold">Manage <span
+        class="block text-lg font-normal text-headAlt -m-2">Categories</span></h2>
+    <ul class="category-list my-12 bg-bgCategory rounded-lg mb-20"></ul>
+
+    <button id="themeToggle" class=" select-none text-slate uppercase text-xs font-primary tracking-widest font-thin border-fossil border py-4 px-3 rounded-full block mx-auto">Toggle dark mode</button>
+  </section>
+</main>
+<%- include('../components/settings-category.ejs') %>
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/after-body.ejs') %>

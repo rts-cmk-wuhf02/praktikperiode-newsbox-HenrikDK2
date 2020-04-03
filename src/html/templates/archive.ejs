@@ -1,0 +1,17 @@
+<%- include('../partials/head.ejs') %>
+<script src="/assets/javascript/slider.js"></script>
+<script src="/assets/javascript/storage.js"></script>
+<script src="/assets/javascript/categories.js"></script>
+<script src="/assets/javascript/archive.js" defer></script>
+<title>Archive</title>
+<%- include('../partials/after-head.ejs') %>
+<% nav = [{icon: 'chevron-back-outline', link: '/'}, 'Archive', {icon: 'settings-sharp', link: '/settings'}] %>
+<%- include('../partials/header.ejs') %>
+<main>
+  <ul id="category-list">
+  </ul>
+</main>
+<%- include('../components/category.ejs') %>
+<%- include('../components/article.ejs') %>
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/after-body.ejs') %>

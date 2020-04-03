@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap");
+@import "./modules/animate.css";
+
+[data-theme="light"] {
+  --sage: #87bcbf;
+  --rust: #d97d54;
+  --drab: #324755;
+  --danger: #d95454;
+  --onyx: #1b1c20;
+  --slate: #6e8ca0;
+  --snow: #fff;
+  --ice: #f0f3f4;
+  --fossil: #c8d1d3;
+  --sand: #b9b0a2;
+  --bg: #fff;
+  --icon: #000;
+  --border: #e2e8f0;
+  --altBorder: #e2e8f0;
+  --iceBorder: #f0f3f4;
+  --bgSearch: #f0f3f4;
+  --head-alt: #707070;
+  --btn-disabled: #e0e5e5;
+  --bgArticle: #fff;
+  --bgSearch: #f0f3f4;
+  --bgCategory:#fff;
+  --btn-enabled:#87bcbf;
+  --bgButton:#87bcbf;
+  --bgSettings: #f0f3f4;
+}
+
+[data-theme="dark"] {
+  --sage: #5a3d5c;
+  --rust: #d97d54;
+  --drab: #f638dc;
+  --danger: #d95454;
+  --onyx: #1b1c20;
+  --slate: #7f3185;
+  --snow: #fff;
+  --ice: #f0f3f4;
+  --bgCategory:#382039;
+  --fossil: #c8d1d3;
+  --sand: #b9b0a2;
+  --bg: #161616;
+  --altBorder: #5a3d5c;
+  --border: #000000;
+  --bgArticle: rgb(26, 26, 26);
+  --bgSearch: rgb(44, 44, 44);
+  --btn-enabled:#b05ec0;
+  --icon: #fff;
+  --head-alt: rgb(90, 61, 92);
+  --iceBorder: #000000;
+  --bgSettings: #200f21;
+  --btn-disabled: #e0e5e5;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgEven:nth-child(even){
+  background-color: var('--bgCategory');
+}
+
+.min-screen-nav{
+  min-height:calc(100vh - 78.5px);
+}
+
+.textOverflow {
+  text-overflow: ellipsis;
+}
+
+.translateX100 {
+  transform: translateX(100%);
+}
+
+.translateX50 {
+  transform: translateX(50%);
+}
+
+.translateY-50 {
+  transform: translateY(-50%);
+}
+
+.translate-50 {
+  transform: translate(-50%, -50%);
+}

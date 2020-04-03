@@ -1,0 +1,14 @@
+
+.pipe(
+    purgecss({
+        content: ['./src/**/*.js', './src/**/*.ejs', "./tailwind.config.js"],
+        extractors: [
+            {
+                extractor: TailwindExtractor,
+                extensions: ['html']
+            }
+        ],
+        whitelist: ['is-active', 'hidden', 'is-open'],
+        keyframes: true
+    })
+)

@@ -1,0 +1,28 @@
+<header>
+  <nav>
+    <ul class="flex justify-between items-center p-6 m-0 border-b border-border">
+      <li>
+        <a href="<%=nav[0].link %>">
+          <ion-icon name="<%=nav[0].icon %>" class="text-2xl text-icon"></ion-icon>
+        </a>
+      </li>
+
+      <li>
+        <h2 class="text-drab font-primary text-lg font-bold"><%= nav[1] %></h2>
+      </li>
+
+      <li>
+        <a href="<%=nav[2].link %>">
+          <ion-icon name="<%=nav[2].icon %>" class="text-2xl text-icon"></ion-icon>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="search" class="p-4 border-b border-border">
+    <div class="relative h-10 w-full">
+      <input type="text" placeholder="Search News" class="w-full h-full bg-bgSearch placeholder: pl-8 text-slate">
+      <ion-icon name="search-outline" class="absolute top-1/2 translateY-50 right-1/50 text-lg opacity-25"></ion-icon>
+    </div>
+  </div>
+</header>
