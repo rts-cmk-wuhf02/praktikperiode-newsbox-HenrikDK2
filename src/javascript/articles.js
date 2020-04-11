@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
       let clone = document.querySelector('#category-template').content.cloneNode(true)
       const articleList = clone.querySelector('.article-list');
       let list = document.querySelector('#category-list');
-  
+      toggleCategory(clone);
+      
       for (let z = 0; z < obj.item.length; z++) {
         const article = obj.item[z];
         let articleClone = document.querySelector('#article-template').content.cloneNode(true);
@@ -19,14 +20,18 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
         articleList.append(articleClone);
       }
-  
+      
       clone.querySelector('.category').textContent = category;
       list.append(clone)
     }
-  
+    
     swiper();
-    categoriesHideAndShow();
     storageFunction();
+    
+    const articleBtns = document.querySelectorAll('.article-btn');
+    articleBtns.forEach(btn => {
+      sliderBtn(btn);
+    })
   } catch (error) {
     console.log(error)
   }

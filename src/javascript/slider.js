@@ -5,6 +5,7 @@ function swiper() {
     let left;
     let startX;
     article.addEventListener('touchstart', (e) => {
+      console.log('Event aktiv')
       left = e.currentTarget.style.left.match(regex)[0];
       startX = e.touches[0].screenX;
     })

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let clone = document.querySelector('#category-template').content.cloneNode(true)
     const articleList = clone.querySelector('.article-list');
     let list = document.querySelector('#category-list');
+    toggleCategory(clone);
 
     storage.forEach(article => {
       if (article.category.toLowerCase() === category.toLowerCase()) {
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   swiper();
-  categoriesHideAndShow();
   storageFunction();
+
+  const articleBtns = document.querySelectorAll('.article-btn');
+  articleBtns.forEach(btn => {
+    sliderBtn(btn);
+  })
 });

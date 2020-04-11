@@ -69,17 +69,19 @@ function CSS(done) {
     done();
 }
 
-function watchDev() {
-    gulp.watch("src/images/**/*.*", { ignoreInitial: false }, Images);
-    gulp.watch("src/html/**/*.ejs", { ignoreInitial: false }, Html);
-    gulp.watch("src/css/**/*.css", { ignoreInitial: false }, CSS);
-    gulp.watch("./tailwind.config.js", CSS);
-    gulp.watch("src/css/fonts/*.*", { ignoreInitial: false }, Fonts);
-    gulp.watch("src/javascript/**/*.js", { ignoreInitial: false }, JS);
+function watchDev(watch) {
+    if (watch === true) {
+        gulp.watch("src/images/**/*.*", { ignoreInitial: false }, Images);
+        gulp.watch("src/html/**/*.ejs", { ignoreInitial: false }, Html);
+        gulp.watch("src/css/**/*.css", { ignoreInitial: false }, CSS);
+        gulp.watch("./tailwind.config.js", CSS);
+        gulp.watch("src/css/fonts/*.*", { ignoreInitial: false }, Fonts);
+        gulp.watch("src/javascript/**/*.js", { ignoreInitial: false }, JS);
+    }
 }
 
 gulp.task("dev", function (done) {
-    watchDev();
+    watchDev(true);
     connect.server({
         root: 'dist',
         livereload: true
@@ -89,6 +91,35 @@ gulp.task("dev", function (done) {
 });
 
 gulp.task("final", function (done) {
-    watchDev();
+    gulp.src("src/css/fonts/*.*")
+        .pipe(gulp.dest("dist/assets/css/fonts/"))
+    gulp.src("src/images/**/*.*")
+        .pipe(imagemin())
+        .pipe(gulp.dest('dist/assets/images/'))
+    gulp.src("src/javascript/**/*.js")
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(gulp.dest('dist/assets/javascript'))
+    gulp.src("./src/html/templates/*.ejs")
+        .pipe(ejs())
+        .pipe(rename(function (path) {
+            if (path.basename != "index") {
+                path.dirname = path.basename;
+                path.basename = "index";
+            }
+            path.extname = ".html"
+        }))
+        .pipe(gulp.dest("./dist"))
+    gulp.src("src/css/main.css")
+        .pipe(postcss([
+            require('postcss-import'),
+            require('tailwindcss')('./tailwind.config.js'),
+            require('autoprefixer')
+        ]))
+        .pipe(pxtorem({ map: true }))
+
+        .pipe(cleanCSS({ compatibility: "ie7" }))
+        .pipe(gulp.dest('dist/assets/css/'))
     done();
 });
