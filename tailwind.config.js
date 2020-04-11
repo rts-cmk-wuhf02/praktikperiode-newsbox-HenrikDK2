@@ -26,6 +26,10 @@ module.exports = {
         enable:'var(--btn-enabled)'
       },
 
+      zIndex:{
+        "-10":"-10"
+      },
+
       height:{
         "item":"3.625rem",
         "article":"6.25rem",
