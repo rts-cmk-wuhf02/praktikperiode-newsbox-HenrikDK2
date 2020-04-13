@@ -5,14 +5,12 @@ function swiper() {
     let left;
     let startX;
     article.addEventListener('touchstart', (e) => {
-      e.preventDefault();
       console.log('Event aktiv')
       left = e.currentTarget.style.left.match(regex)[0];
       startX = e.touches[0].screenX;
     })
 
     article.addEventListener('touchmove', (e) => {
-      e.preventDefault();
       if (left === "") left = 0;
       let newX = (startX + parseInt(left)) - e.touches[0].screenX;
 
