@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Kosugi+Maru&display=swap");
 @import "./modules/animate.css";
+@import "./modules/spinner.css";
 
 [data-theme="light"] {
   --sage: #87bcbf;
@@ -57,6 +58,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ptr--text{
+  color: var(--fossil) !important;
+}
 
 .bgEven:nth-child(even){
   background-color: var('--bgCategory');
