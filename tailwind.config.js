@@ -57,6 +57,7 @@ module.exports = {
       inset:{
         "10px":"10px",
         "5px":"5px",
+        "4px":"4px",
         "3px":"3px",
         "1/50":"2%",
         "1/2":"50%"
