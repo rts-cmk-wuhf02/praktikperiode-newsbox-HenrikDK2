@@ -10,15 +10,17 @@ defaultCategories.forEach(category => {
   if (hide === true) {
     clone.querySelector('.btn').classList.add('bg-enable');
     clone.querySelector('.btn').classList.remove('bg-disable');
-    clone.querySelector('.btn').querySelector('div').style.left = "38px";
+    clone.querySelector('.btn').querySelector('div').style.transform  = "translateX(38px)";
   }
   clone.querySelector('.btn').addEventListener('touchstart', e => {
     if (hide === true) {
-      e.currentTarget.classList.add('bg-disable');
       e.currentTarget.classList.remove('bg-enable');
-      //e.currentTarget.querySelector('div').classList.remove('slideInLeft');
-      //e.currentTarget.querySelector('div').classList.add('animated', 'slideInRight', 'fastest');
-      e.currentTarget.querySelector('div').style.left = "2px";
+      e.currentTarget.classList.add('bg-disable');
+      anime({
+        targets: e.currentTarget.querySelector('div'),
+        translateX:"2px",
+        duration: 300
+      })
       const index = categories.findIndex(x => x.toLowerCase() === category.toLowerCase());
       if (index > -1) {
         categories.splice(index, 1);
@@ -28,9 +30,11 @@ defaultCategories.forEach(category => {
     } else {
       e.currentTarget.classList.add('bg-enable');
       e.currentTarget.classList.remove('bg-disable');
-      //e.currentTarget.querySelector('div').classList.remove('slideInRight');
-      //e.currentTarget.querySelector('div').classList.add('animated', 'slideInLeft', 'fastest');
-      e.currentTarget.querySelector('div').style.left = "38px"
+      anime({
+        targets: e.currentTarget.querySelector('div'),
+        translateX:"38px",
+        duration: 300
+      })
       categories.push(category);
       localStorage.setItem('categories', JSON.stringify(categories))
       hide = true;
