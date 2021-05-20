@@ -13,13 +13,9 @@ function swiper() {
       if (left === "") left = 0;
       let newX = (startX + parseInt(left)) - e.touches[0].screenX;
 
-      if (newX < -110) {
-        newX = -128;
-      }
-
-      if (newX > 0) {
-        newX = 0;
-      }
+      if (newX < -110) newX = -128;
+      if (newX > 0) newX = 0;
+      
       article.style.left = newX + "PX";
     });
   });

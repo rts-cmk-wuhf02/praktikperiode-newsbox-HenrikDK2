@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 
   swiper();
-  storageFunction();
 
   const articleBtns = document.querySelectorAll('.article-btn');
   articleBtns.forEach(btn => {

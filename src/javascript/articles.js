@@ -27,7 +27,6 @@ async function getArticles(){
       }
       
       swiper();
-      storageFunction();
       
       const articleBtns = document.querySelectorAll('.article-btn');
       articleBtns.forEach(btn => {
